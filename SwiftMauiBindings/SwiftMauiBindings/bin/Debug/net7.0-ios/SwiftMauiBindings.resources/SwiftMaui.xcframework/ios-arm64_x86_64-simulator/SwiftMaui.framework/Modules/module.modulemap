@@ -1,4 +1,0 @@
-framework module SwiftMaui {
-  header "SwiftMaui-Swift.h"
-  requires objc
-}
