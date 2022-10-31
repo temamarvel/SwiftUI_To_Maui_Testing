@@ -35,6 +35,253 @@
         "children": [
           {
             "kind": "Var",
+            "name": "deleg",
+            "printedName": "deleg",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Int) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@SwiftMaui@objc(cs)UIKitWrapper(py)deleg",
+            "mangledName": "$s9SwiftMaui12UIKitWrapperC5delegySicSgvp",
+            "moduleName": "SwiftMaui",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Int) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Int) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@SwiftMaui@objc(cs)UIKitWrapper(im)deleg",
+                "mangledName": "$s9SwiftMaui12UIKitWrapperC5delegySicSgvg",
+                "moduleName": "SwiftMaui",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Int) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Int) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@SwiftMaui@objc(cs)UIKitWrapper(im)setDeleg:",
+                "mangledName": "$s9SwiftMaui12UIKitWrapperC5delegySicSgvs",
+                "moduleName": "SwiftMaui",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9SwiftMaui12UIKitWrapperC5delegySicSgvM",
+                "mangledName": "$s9SwiftMaui12UIKitWrapperC5delegySicSgvM",
+                "moduleName": "SwiftMaui",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "counterValue",
+            "printedName": "counterValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@SwiftMaui@objc(cs)UIKitWrapper(py)counterValue",
+            "mangledName": "$s9SwiftMaui12UIKitWrapperC12counterValueSivp",
+            "moduleName": "SwiftMaui",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@SwiftMaui@objc(cs)UIKitWrapper(im)counterValue",
+                "mangledName": "$s9SwiftMaui12UIKitWrapperC12counterValueSivg",
+                "moduleName": "SwiftMaui",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@SwiftMaui@objc(cs)UIKitWrapper(im)setCounterValue:",
+                "mangledName": "$s9SwiftMaui12UIKitWrapperC12counterValueSivs",
+                "moduleName": "SwiftMaui",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9SwiftMaui12UIKitWrapperC12counterValueSivM",
+                "mangledName": "$s9SwiftMaui12UIKitWrapperC12counterValueSivM",
+                "moduleName": "SwiftMaui",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "uiView",
             "printedName": "uiView",
             "children": [
@@ -59,8 +306,7 @@
             "moduleName": "SwiftMaui",
             "declAttributes": [
               "AccessControl",
-              "ObjC",
-              "RawDocComment"
+              "ObjC"
             ],
             "accessors": [
               {
@@ -236,7 +482,8 @@
         "moduleName": "SwiftMaui",
         "declAttributes": [
           "AccessControl",
-          "ObjC"
+          "ObjC",
+          "RawDocComment"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
         "inheritsConvenienceInitializers": true,
@@ -333,8 +580,29 @@
   "ConstValues": [
     {
       "filePath": "\/Users\/artemdenisov\/SwiftUI_To_Maui\/SwiftMaui\/SwiftMaui\/UIKitWrapper.swift",
+      "kind": "StringLiteral",
+      "offset": 305,
+      "length": 22,
+      "value": "\"new value \""
+    },
+    {
+      "filePath": "\/Users\/artemdenisov\/SwiftUI_To_Maui\/SwiftMaui\/SwiftMaui\/UIKitWrapper.swift",
+      "kind": "StringLiteral",
+      "offset": 326,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/artemdenisov\/SwiftUI_To_Maui\/SwiftMaui\/SwiftMaui\/UIKitWrapper.swift",
       "kind": "IntegerLiteral",
-      "offset": 223,
+      "offset": 278,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/artemdenisov\/SwiftUI_To_Maui\/SwiftMaui\/SwiftMaui\/UIKitWrapper.swift",
+      "kind": "IntegerLiteral",
+      "offset": 872,
       "length": 1,
       "value": "0"
     }

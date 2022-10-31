@@ -256,6 +256,8 @@ using UInt = size_t;
 
 SWIFT_CLASS("_TtC9SwiftMaui12UIKitWrapper")
 @interface UIKitWrapper : NSObject
+@property (nonatomic, copy) void (^ _Nullable deleg)(NSInteger);
+@property (nonatomic) NSInteger counterValue;
 @property (nonatomic, readonly, strong) UIView * _Nullable uiView;
 @property (nonatomic, readonly, strong) UIViewController * _Nullable viewController;
 - (void)createSwiftView;
@@ -529,6 +531,8 @@ using UInt = size_t;
 
 SWIFT_CLASS("_TtC9SwiftMaui12UIKitWrapper")
 @interface UIKitWrapper : NSObject
+@property (nonatomic, copy) void (^ _Nullable deleg)(NSInteger);
+@property (nonatomic) NSInteger counterValue;
 @property (nonatomic, readonly, strong) UIView * _Nullable uiView;
 @property (nonatomic, readonly, strong) UIViewController * _Nullable viewController;
 - (void)createSwiftView;

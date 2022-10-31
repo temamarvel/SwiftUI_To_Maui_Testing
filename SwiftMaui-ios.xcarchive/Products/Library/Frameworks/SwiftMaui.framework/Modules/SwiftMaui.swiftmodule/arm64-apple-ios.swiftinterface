@@ -9,6 +9,8 @@ import UIKit
 import _Concurrency
 import _StringProcessing
 @_inheritsConvenienceInitializers @objc public class UIKitWrapper : ObjectiveC.NSObject, Foundation.ObservableObject {
+  @objc public var deleg: ((Swift.Int) -> Swift.Void)?
+  @objc public var counterValue: Swift.Int
   @objc public var uiView: UIKit.UIView? {
     @objc get
   }
