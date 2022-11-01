@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct SwiftUIView: View {
-    @ObservedObject var counter: Counter
+    @ObservedObject var viewModel: MySwiftUIView
     
     var body: some View {
         VStack{
             Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            Text("Count \(counter.counter)")
+            Text("Count \(viewModel.counter)")
             Button("Increase"){
                 increase()
             }
@@ -24,18 +24,18 @@ struct SwiftUIView: View {
     }
     
     func increase() -> Void {
-        counter.counter += 1
+        viewModel.counter += 1
     }
     
     func decrease() -> Void {
-        counter.counter -= 1
+        viewModel.counter -= 1
     }
 }
 
 struct SwiftUIView_Previews: PreviewProvider {
-    static var counter = Counter()
+    static var counter = MySwiftUIView()
     
     static var previews: some View {
-        SwiftUIView(counter: counter)
+        SwiftUIView(viewModel: counter)
     }
 }

@@ -5,17 +5,17 @@ using UIKit;
 
 namespace Bindings.SwiftUIToMaui
 {
-	// @interface UIKitWrapper : NSObject
-	[BaseType (typeof(NSObject), Name = "_TtC9SwiftMaui12UIKitWrapper")]
-	interface UIKitWrapper
+	// @interface MySwiftUIView : NSObject
+	[BaseType (typeof(NSObject), Name = "_TtC9SwiftMaui13MySwiftUIView")]
+	interface MySwiftUIView
 	{
-		// @property (copy, nonatomic) void (^ _Nullable)(NSInteger) deleg;
-		[NullAllowed, Export ("deleg", ArgumentSemantic.Copy)]
-		Action<nint> Deleg { get; set; }
+		// @property (nonatomic) NSInteger counter;
+		[Export ("counter")]
+		nint Counter { get; set; }
 
-		// @property (nonatomic) NSInteger counterValue;
-		[Export ("counterValue")]
-		nint CounterValue { get; set; }
+		// @property (copy, nonatomic) void (^ _Nullable)(NSInteger) onChangedHandler;
+		[NullAllowed, Export ("onChangedHandler", ArgumentSemantic.Copy)]
+		Action<nint> OnChangedHandler { get; set; }
 
 		// @property (readonly, nonatomic, strong) UIView * _Nullable uiView;
 		[NullAllowed, Export ("uiView", ArgumentSemantic.Strong)]
@@ -25,12 +25,8 @@ namespace Bindings.SwiftUIToMaui
 		[NullAllowed, Export ("viewController", ArgumentSemantic.Strong)]
 		UIViewController ViewController { get; }
 
-		// -(void)createSwiftView;
-		[Export ("createSwiftView")]
-		void CreateSwiftView ();
-
-		// -(void)setCounterWithValue:(NSInteger)value;
-		[Export ("setCounterWithValue:")]
-		void SetCounterWithValue (nint value);
+		// -(void)createSwiftUIView;
+		[Export ("createSwiftUIView")]
+		void CreateSwiftUIView ();
 	}
 }

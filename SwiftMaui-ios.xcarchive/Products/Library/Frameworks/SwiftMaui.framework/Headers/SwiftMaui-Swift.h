@@ -254,14 +254,13 @@ using UInt = size_t;
 @class UIView;
 @class UIViewController;
 
-SWIFT_CLASS("_TtC9SwiftMaui12UIKitWrapper")
-@interface UIKitWrapper : NSObject
-@property (nonatomic, copy) void (^ _Nullable deleg)(NSInteger);
-@property (nonatomic) NSInteger counterValue;
+SWIFT_CLASS("_TtC9SwiftMaui13MySwiftUIView")
+@interface MySwiftUIView : NSObject
+@property (nonatomic) NSInteger counter;
+@property (nonatomic, copy) void (^ _Nullable onChangedHandler)(NSInteger);
 @property (nonatomic, readonly, strong) UIView * _Nullable uiView;
 @property (nonatomic, readonly, strong) UIViewController * _Nullable viewController;
-- (void)createSwiftView;
-- (void)setCounterWithValue:(NSInteger)value;
+- (void)createSwiftUIView;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

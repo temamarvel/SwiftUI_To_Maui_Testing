@@ -8,17 +8,24 @@ import SwiftUI
 import UIKit
 import _Concurrency
 import _StringProcessing
-@_inheritsConvenienceInitializers @objc public class UIKitWrapper : ObjectiveC.NSObject, Foundation.ObservableObject {
-  @objc public var deleg: ((Swift.Int) -> Swift.Void)?
-  @objc public var counterValue: Swift.Int
+@_inheritsConvenienceInitializers @objc public class MySwiftUIView : ObjectiveC.NSObject {
+  @objc @Combine.Published @_projectedValueProperty($counter) public var counter: Swift.Int {
+    @objc get
+    @objc set
+  }
+  public var $counter: Combine.Published<Swift.Int>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @objc public var onChangedHandler: ((Swift.Int) -> Swift.Void)?
   @objc public var uiView: UIKit.UIView? {
     @objc get
   }
   @objc public var viewController: UIKit.UIViewController? {
     @objc get
   }
-  @objc public func createSwiftView()
-  @objc public func setCounter(value: Swift.Int)
+  @objc public func createSwiftUIView()
   @objc override dynamic public init()
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit

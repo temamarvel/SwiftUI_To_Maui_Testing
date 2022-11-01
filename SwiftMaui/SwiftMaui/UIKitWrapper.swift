@@ -9,47 +9,60 @@ import Foundation
 import UIKit
 import SwiftUI
 
-
-class Counter : UIView, ObservableObject{
-    // TODO: check if didSet works for property updates
-    @Published var counter = 0 { didSet {
-        print("new value \(counter)")
-        guard let handler = onChangedHandler else { return }
-        handler(counter)
-    }
+class MyHosting<Content> : UIHostingController<Content> where Content : View {
+    required override init(rootView: Content) {
+        super.init(rootView: rootView)
     }
     
-    public var onChangedHandler : ((Int) -> Void)?
+    @MainActor required dynamic init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
-//
-@objc public class UIKitWrapper: NSObject, ObservableObject {
-    //@ObservedObject private var counter = Counter()
-    //@Published var superCounter = 0
+
+
+protocol UIKitWrapper : NSObject, ObservableObject {
+    associatedtype Swift where Swift: View
+    associatedtype Kit
+    associatedtype Controller where Controller : MyHosting<Swift>
     
-    @objc public var deleg : ((Int) -> Void)?
-    var counter : Counter = Counter()
-    var swiftView : SwiftUIView?
-    var hostingController: UIHostingController<SwiftUIView>?
+    var uiView: Kit? { get }
+    var swiftUIView : Swift? { get set }
+    var hostingController : Controller? { get set}
+    func createSwiftUIView() -> Void
+}
+
+extension UIKitWrapper {
+    func createController(view: Swift){
+        hostingController = Controller(rootView: view)
+    }
+}
+
+@objc public class MySwiftUIView: NSObject, UIKitWrapper {
+    typealias Swift = SwiftUIView
+    typealias Kit = UIView
+    typealias Controller = MyHosting<SwiftUIView>
     
-    @objc public var counterValue : Int = 0
+    var swiftUIView : SwiftUIView?
+    var hostingController: MyHosting<SwiftUIView>?
     
+    @objc @Published public var counter = 0 {
+        didSet {
+            guard let handler = onChangedHandler else { return }
+            handler(counter)
+        }
+    }
+    
+    @objc public var onChangedHandler : ((Int) -> Void)?
     @objc public var uiView: UIView? {
         hostingController?.view
     }
     @objc public var viewController: UIViewController? { hostingController }
-    
-    @objc public func createSwiftView() {
-        counter.onChangedHandler = deleg
-        swiftView = SwiftUIView(counter: counter)
-        createController(swiftView: swiftView!)
-        
-        setCounter(value: 10)
-    }
-    @objc public func setCounter(value: Int) {
-        counter.counter = value
+    @objc public func createSwiftUIView() {
+        swiftUIView = SwiftUIView(viewModel: self)
+        createController(view: swiftUIView!)
     }
     
-    func createController(swiftView: SwiftUIView) {
-        hostingController = UIHostingController(rootView: swiftView)
-    }
+//    func createController(swiftView: SwiftUIView) {
+//        hostingController = UIHostingController(rootView: swiftView)
+//    }
 }
