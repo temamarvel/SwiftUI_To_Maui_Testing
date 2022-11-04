@@ -643,6 +643,16 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "SwiftMaui",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       }
     ],
     "json_format_version": 8
@@ -661,6 +671,13 @@
       "offset": 1250,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Users\/artemdenisov\/SwiftUI_To_Maui\/SwiftMaui\/SwiftMaui\/MyTextEdit.swift",
+      "kind": "StringLiteral",
+      "offset": 163,
+      "length": 10,
+      "value": "\"testText\""
     }
   ]
 }
