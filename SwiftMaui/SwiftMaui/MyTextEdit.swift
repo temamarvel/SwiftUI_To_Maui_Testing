@@ -1,86 +1,108 @@
 //
-//  SwiftUIView.swift
+//  NewTextEdit.swift
+//  TestFrameworkApp
 //
-//
-//  Created by Артем Денисов on 02.11.2022.
+//  Created by Артем Денисов on 07.11.2022.
 //
 
 import SwiftUI
 
-struct MyTextEdit: View {
+
+//TODO: make it public and mutating
+struct RShape: Shape {
+    let radius = 10.0
+    @Binding var gap : CGFloat
+    
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        
+        path.move(to: CGPoint(x: gap+radius, y: 0))
+        path.addLine(to: CGPoint(x: rect.width - radius, y: 0))
+        path.addArc(center: CGPoint(x: rect.width - radius, y: radius),
+                    radius: radius,
+                    startAngle: .degrees(270),
+                    endAngle: .degrees(0),
+                    clockwise: false)
+        path.addLine(to: CGPoint(x: rect.width, y: rect.height))
+        path.addLine(to: CGPoint(x: 0, y: rect.height))
+        path.addLine(to: .zero)
+        
+        return path
+    }
+}
+
+
+struct NewTextEdit: View {
     @State private var text = "testText"
     let borderColor = Color.red
     let focusBorderColor = Color.green
     @FocusState private var isFocused : Bool
-    @State private var isScale = false
+    @State private var padding : CGFloat = 10
+    let placeholder = "1234567889"
+    let lableIndent : CGFloat = 5
+    var scalePlaceholder : Bool { isFocused || text.count > 0 }
+    @State private var labelWidth : CGFloat = 0
     
     var body: some View {
-        
-            VStack{
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            
+            HStack{
+                Image(systemName: "person.crop.circle.fill")
                 
-
-                    
-                    HStack{
-                        Image(systemName: "person.crop.circle.fill").padding(5)
-                        
-                        TextField(isScale ? "" : "testTitle", text: $text).focused($isFocused).coordinateSpace(name: "field")
-                        
-                        Button { text = "" } label: {
-                            Image(systemName: "x.circle.fill")
-                                .foregroundColor(Color.secondary).padding(5)
+                TextField("", text: $text)
+                    .focused($isFocused)
+                    .overlay(){
+                        GeometryReader{ geometry in
+                            HStack{
+                                Text("\(placeholder)")
+                                    .font(scalePlaceholder ? .caption2 : .body)
+                                    .offset(x: scalePlaceholder ? -geometry.frame(in: .named("stack")).origin.x + lableIndent : 0,
+                                            y: scalePlaceholder ? -(geometry.size.height / 2 + padding) : 0)
+                                    .animation(.linear(duration: 0.1), value: scalePlaceholder)
+                                    .background{
+                                        GeometryReader{ (geometry) -> Color in
+                                            DispatchQueue.main.async {
+                                                labelWidth = geometry.size.width
+                                            }
+                                            return Color.clear
+                                            
+                                        }
+                                        
+                                    }
+                            }
+                            .frame(width: geometry.size.width,
+                                   height: geometry.size.height,
+                                   alignment: .init(horizontal: .leading, vertical: .center))
                         }
                     }
-                    .padding([.bottom, .top], 10)
-                    .overlay(){
-                        RoundedRectangle(cornerRadius: 4).stroke(isFocused ? focusBorderColor : borderColor, lineWidth: 2)
-                    }
-                    .overlay(){
-                        Text("label")
-                            
-                            .padding([.horizontal], 5)
-                            .background(Color.green)
-                            .position(x: 0, y: 0)
-                            //.offset(x: frame.midX)
-                        
-                        //.offset(x: isScale ? -130 : -330, y: isScale ? 0 : -50)
-                        //.scaleEffect(isScale ? 1 : 0.5)
-                        //.animation(.default, value: isScale)
-                        
-                        
-//                    GeometryReader{ geometry in
-//                        let frame = geometry.frame(in: .named("field"))
-//
-//                        Text("label \(frame.origin.y)")
-//
-//                            .padding([.horizontal], 5)
-//                            .background(Color.green)
-//                            .offset(x: frame.midX)
-//
-//                        //.offset(x: isScale ? -130 : -330, y: isScale ? 0 : -50)
-//                        //.scaleEffect(isScale ? 1 : 0.5)
-//                        //.animation(.default, value: isScale)
-//                    }
-                    //.frame(width: 100, height: 100)
-                }
                 
-                
-                Text(text)
-//                Text("\(reader.frame(in: .named("field")).height)")
-//                Text("\(reader.frame(in: .local).height)")
-                TextField("testTitle", text: $text)
-                Button("Test scale"){
-                    isScale.toggle()
-                    
-                    
+                Button { clear() } label: {
+                    Image(systemName: "x.circle.fill")
+                        .foregroundColor(Color.secondary)
                 }
             }
+            .padding(padding)
+            .coordinateSpace(name: "stack")
+            .background(){
+                GeometryReader{ geometry in
+                    RShape(gap: scalePlaceholder ? $labelWidth : .constant(0))
+                        .stroke(isFocused ? focusBorderColor : borderColor, lineWidth: 2)
+                }
+            }
+        }
         
+    }
+    
+    func clear(){
+        text = ""
     }
 }
 
-struct MyTextEdit_Previews: PreviewProvider {
+struct NewTextEdit_Previews: PreviewProvider {
     static var previews: some View {
-        MyTextEdit()
+        VStack{
+            NewTextEdit()
+        }.background(Color.yellow)
     }
 }
