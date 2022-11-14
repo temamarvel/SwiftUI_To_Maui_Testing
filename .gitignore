@@ -96,3 +96,7 @@ TestFrameworkApp/
 TestFrameworkApp
 TestFrameworkApp/TestFrameworkApp.xcodeproj
 TestFrameworkApp/TestFrameworkApp
+MyMAUILibrary/.vs
+MyMAUILibrary/.idea
+MyMAUILibrary/MyMAUILibrary/obj/
+MyMAUILibrary/MyMAUILibrary/bin/
