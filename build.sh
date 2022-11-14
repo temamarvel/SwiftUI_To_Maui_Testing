@@ -46,6 +46,10 @@ print_yellow "\n[Generate ApiDefinitions.cs file]\n"
 
 sharpie bind -sdk iphoneos -output ./ -namespace Bindings.SwiftUIToMaui -framework ./SwiftMaui.xcframework/ios-arm64/SwiftMaui.framework
 
+print_yellow "\n[Fix protocol/intarface names in ApiDefinitions.cs file]\n"
+
+python3 protocolsToInterface.py
+
 cp ApiDefinitions.cs SwiftMauiBindings/SwiftMauiBindings/
 
 cd SwiftMauiBindings

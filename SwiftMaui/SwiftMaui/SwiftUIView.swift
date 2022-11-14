@@ -20,7 +20,7 @@ struct SwiftUIView: View {
             Button("Decrease"){
                 decrease()
             }
-            MyTextEdit()
+            NewTextEdit()
         }
     }
     

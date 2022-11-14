@@ -403,9 +403,10 @@
             "usr": "c:@M@SwiftMaui@objc(cs)MySwiftUIView(py)uiView",
             "mangledName": "$s9SwiftMaui02MyA6UIViewC6uiViewSo0D0CSgvp",
             "moduleName": "SwiftMaui",
+            "objc_name": "uiView",
             "declAttributes": [
-              "AccessControl",
-              "ObjC"
+              "ObjC",
+              "AccessControl"
             ],
             "accessors": [
               {
@@ -432,6 +433,7 @@
                 "usr": "c:@M@SwiftMaui@objc(cs)MySwiftUIView(im)uiView",
                 "mangledName": "$s9SwiftMaui02MyA6UIViewC6uiViewSo0D0CSgvg",
                 "moduleName": "SwiftMaui",
+                "objc_name": "uiView",
                 "declAttributes": [
                   "ObjC"
                 ],
@@ -553,6 +555,195 @@
         "moduleName": "SwiftMaui",
         "declAttributes": [
           "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "UIViewHost",
+            "printedName": "UIViewHost",
+            "usr": "c:@M@SwiftMaui@objc(pl)UIViewHost",
+            "mangledName": "$s9SwiftMaui10UIViewHostP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ObservableObject",
+            "printedName": "ObservableObject",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ObjectWillChangePublisher",
+                "printedName": "ObjectWillChangePublisher",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ObservableObjectPublisher",
+                    "printedName": "Combine.ObservableObjectPublisher",
+                    "usr": "s:7Combine25ObservableObjectPublisherC"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7Combine16ObservableObjectP",
+            "mangledName": "$s7Combine16ObservableObjectP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MyTextWrapper",
+        "printedName": "MyTextWrapper",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MyTextWrapper",
+                "printedName": "SwiftMaui.MyTextWrapper",
+                "usr": "c:@M@SwiftMaui@objc(cs)MyTextWrapper"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SwiftMaui@objc(cs)MyTextWrapper(im)init",
+            "mangledName": "$s9SwiftMaui13MyTextWrapperCACycfc",
+            "moduleName": "SwiftMaui",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "uiView",
+            "printedName": "uiView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@SwiftMaui@objc(cs)MyTextWrapper(py)uiView",
+            "mangledName": "$s9SwiftMaui13MyTextWrapperC6uiViewSo6UIViewCSgvp",
+            "moduleName": "SwiftMaui",
+            "objc_name": "uiView",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@SwiftMaui@objc(cs)MyTextWrapper(im)uiView",
+                "mangledName": "$s9SwiftMaui13MyTextWrapperC6uiViewSo6UIViewCSgvg",
+                "moduleName": "SwiftMaui",
+                "objc_name": "uiView",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@SwiftMaui@objc(cs)MyTextWrapper",
+        "mangledName": "$s9SwiftMaui13MyTextWrapperC",
+        "moduleName": "SwiftMaui",
+        "declAttributes": [
+          "AccessControl",
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
@@ -561,6 +752,13 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "UIViewHost",
+            "printedName": "UIViewHost",
+            "usr": "c:@M@SwiftMaui@objc(pl)UIViewHost",
+            "mangledName": "$s9SwiftMaui10UIViewHostP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -636,6 +834,111 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SwiftMaui",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SwiftMaui"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "SwiftMaui"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UIViewHost",
+        "printedName": "UIViewHost",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "uiView",
+            "printedName": "uiView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@SwiftMaui@objc(pl)UIViewHost(py)uiView",
+            "mangledName": "$s9SwiftMaui10UIViewHostP6uiViewSo0C0CSgvp",
+            "moduleName": "SwiftMaui",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@SwiftMaui@objc(pl)UIViewHost(im)uiView",
+                "mangledName": "$s9SwiftMaui10UIViewHostP6uiViewSo0C0CSgvg",
+                "moduleName": "SwiftMaui",
+                "genericSig": "<τ_0_0 where τ_0_0 : SwiftMaui.UIViewHost>",
+                "sugared_genericSig": "<Self where Self : SwiftMaui.UIViewHost>",
+                "protocolReq": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@SwiftMaui@objc(pl)UIViewHost",
+        "mangledName": "$s9SwiftMaui10UIViewHostP",
+        "moduleName": "SwiftMaui",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
         "declKind": "Import",
@@ -668,16 +971,65 @@
     {
       "filePath": "\/Users\/artemdenisov\/SwiftUI_To_Maui\/SwiftMaui\/SwiftMaui\/UIKitWrapper.swift",
       "kind": "IntegerLiteral",
-      "offset": 1250,
+      "offset": 1383,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/artemdenisov\/SwiftUI_To_Maui\/SwiftMaui\/SwiftMaui\/MyTextEdit.swift",
+      "kind": "FloatLiteral",
+      "offset": 202,
+      "length": 4,
+      "value": "10.0"
+    },
+    {
+      "filePath": "\/Users\/artemdenisov\/SwiftUI_To_Maui\/SwiftMaui\/SwiftMaui\/MyTextEdit.swift",
+      "kind": "BooleanLiteral",
+      "offset": 990,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/artemdenisov\/SwiftUI_To_Maui\/SwiftMaui\/SwiftMaui\/MyTextEdit.swift",
+      "kind": "StringLiteral",
+      "offset": 1031,
+      "length": 10,
+      "value": "\"testText\""
+    },
+    {
+      "filePath": "\/Users\/artemdenisov\/SwiftUI_To_Maui\/SwiftMaui\/SwiftMaui\/MyTextEdit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1201,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/artemdenisov\/SwiftUI_To_Maui\/SwiftMaui\/SwiftMaui\/MyTextEdit.swift",
+      "kind": "StringLiteral",
+      "offset": 1226,
+      "length": 12,
+      "value": "\"1234567889\""
+    },
+    {
+      "filePath": "\/Users\/artemdenisov\/SwiftUI_To_Maui\/SwiftMaui\/SwiftMaui\/MyTextEdit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1271,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/artemdenisov\/SwiftUI_To_Maui\/SwiftMaui\/SwiftMaui\/MyTextEdit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1383,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/artemdenisov\/SwiftUI_To_Maui\/SwiftMaui\/SwiftMaui\/MyTextEdit.swift",
       "kind": "StringLiteral",
-      "offset": 163,
-      "length": 10,
-      "value": "\"testText\""
+      "offset": 3838,
+      "length": 5,
+      "value": "\"tst\""
     }
   ]
 }

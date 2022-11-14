@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B721B7B292277B80083A349 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B721B7A292277B80083A349 /* Protocols.swift */; };
 		3B7CEEAB290D982D003C33E0 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CEEAA290D982C003C33E0 /* SwiftUIView.swift */; };
 		3B7CEEAF290D9FFE003C33E0 /* UIKitWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CEEAE290D9FFE003C33E0 /* UIKitWrapper.swift */; };
 		3BFA05432913FB6D00C54EFB /* MyTextEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFA05422913FB6D00C54EFB /* MyTextEdit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B721B7A292277B80083A349 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		3B7CEEA0290D9787003C33E0 /* SwiftMaui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMaui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7CEEAA290D982C003C33E0 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		3B7CEEAE290D9FFE003C33E0 /* UIKitWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitWrapper.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 				3B7CEEAA290D982C003C33E0 /* SwiftUIView.swift */,
 				3B7CEEAE290D9FFE003C33E0 /* UIKitWrapper.swift */,
 				3BFA05422913FB6D00C54EFB /* MyTextEdit.swift */,
+				3B721B7A292277B80083A349 /* Protocols.swift */,
 			);
 			path = SwiftMaui;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B7CEEAF290D9FFE003C33E0 /* UIKitWrapper.swift in Sources */,
+				3B721B7B292277B80083A349 /* Protocols.swift in Sources */,
 				3BFA05432913FB6D00C54EFB /* MyTextEdit.swift in Sources */,
 				3B7CEEAB290D982D003C33E0 /* SwiftUIView.swift in Sources */,
 			);
@@ -279,7 +283,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,7 +318,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

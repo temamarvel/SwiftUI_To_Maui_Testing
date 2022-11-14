@@ -31,8 +31,14 @@ struct RShape: Shape {
     }
 }
 
+protocol TestView : View {
+    var testProperty: Bool {get set}
+}
 
-struct NewTextEdit: View {
+
+struct NewTextEdit: TestView {
+    var testProperty: Bool = false
+    
     @State private var text = "testText"
     let borderColor = Color.red
     let focusBorderColor = Color.green
@@ -96,6 +102,14 @@ struct NewTextEdit: View {
     
     func clear(){
         text = ""
+    }
+}
+
+struct TextWrapperView : View {
+    @State private var text = "tst"
+    
+    var body: some View {
+        TextField("placeholder", text: $text).background(Color.orange)
     }
 }
 

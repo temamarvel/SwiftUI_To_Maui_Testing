@@ -19,27 +19,30 @@ class MyHosting<Content> : UIHostingController<Content> where Content : View {
     }
 }
 
+//@objc public protocol UIViewHost{
+//    var uiView: UIView? { get }
+//}
+//
+//protocol UIKitWrapper : NSObject, ObservableObject {
+//    associatedtype Swift where Swift: View
+//    associatedtype Controller where Controller : MyHosting<Swift>
+//    
+//    //var uiView: Kit? { get }
+//    var swiftUIView : Swift? { get set }
+//    var hostingController : Controller? { get set}
+//    //TODO: do it in extension
+//    func createSwiftUIView() -> Void
+//}
+//
+//extension UIKitWrapper {
+//    func createController(view: Swift){
+//        hostingController = Controller(rootView: view)
+//    }
+//}
 
-protocol UIKitWrapper : NSObject, ObservableObject {
-    associatedtype Swift where Swift: View
-    associatedtype Kit
-    associatedtype Controller where Controller : MyHosting<Swift>
-    
-    var uiView: Kit? { get }
-    var swiftUIView : Swift? { get set }
-    var hostingController : Controller? { get set}
-    func createSwiftUIView() -> Void
-}
-
-extension UIKitWrapper {
-    func createController(view: Swift){
-        hostingController = Controller(rootView: view)
-    }
-}
-
-@objc public class MySwiftUIView: NSObject, UIKitWrapper {
+@objc public class MySwiftUIView: NSObject, UIViewHost , UIKitWrapper {
     typealias Swift = SwiftUIView
-    typealias Kit = UIView
+    //typealias Kit = UIView
     typealias Controller = MyHosting<SwiftUIView>
     
     var swiftUIView : SwiftUIView?
@@ -66,3 +69,49 @@ extension UIKitWrapper {
 //        hostingController = UIHostingController(rootView: swiftView)
 //    }
 }
+
+
+@objc public class MyTextWrapper: NSObject, UIViewHost, UIKitWrapper {
+    typealias Swift = TextWrapperView
+    typealias Kit = UIView
+    typealias Controller = MyHosting<TextWrapperView>
+
+    public override init() {
+        super.init()
+        createSwiftUIView()
+    }
+
+    var swiftUIView : Swift?
+    var hostingController: MyHosting<TextWrapperView>?
+    @objc public var uiView: UIView? {
+        hostingController?.view
+    }
+
+    func createSwiftUIView() {
+        swiftUIView = TextWrapperView()
+        createController(view: swiftUIView!)
+    }
+    
+    
+}
+
+//TODO: a lot of boilerplate code
+//public class TextWrapper2 : NSObject, UIKitWrapper{
+//    var uiView: UIView?
+//
+//    var swiftUIView: TextWrapperView?
+//
+//    var hostingController: MyHosting<TextWrapperView>?
+//
+//    typealias Swift = TextWrapperView
+//
+//    typealias Kit = UIView
+//
+//    typealias Controller = MyHosting<TextWrapperView>
+//
+//    func createSwiftUIView() {
+//
+//    }
+//
+//
+//}
