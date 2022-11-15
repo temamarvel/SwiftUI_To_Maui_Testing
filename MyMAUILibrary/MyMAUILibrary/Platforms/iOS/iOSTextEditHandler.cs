@@ -21,6 +21,11 @@ public class TextEditHandler : iOSHandlerBase<MySwiftUIView, TextEditView> {
         base.CreatePlatformView();
         Wrapper = new MySwiftUIView();
 
+        //if you set properties to viewmodel before return from this method
+        //it will be applied to swifyui view
+        //because View creation is the next step
+        //SO THAT you can set some dotnet properties to non-binding swift propertios on this phase
+        //but they won't observe chnges at run-time
         ApplyTemplate();
 
         return Wrapper.UiView;
