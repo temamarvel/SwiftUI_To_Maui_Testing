@@ -54,6 +54,7 @@ class MyHosting<Content> : UIHostingController<Content> where Content : View {
             handler(counter)
         }
     }
+    @objc public var itemTemplate : UIView?
     
     @objc public var onChangedHandler : ((Int) -> Void)?
     @objc public var uiView: UIView? {
