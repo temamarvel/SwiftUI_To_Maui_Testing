@@ -20,7 +20,13 @@ struct SwiftUIView: View {
             Button("Decrease"){
                 decrease()
             }
-            NewTextEdit()
+
+            if let template = viewModel.itemTemplate {
+                TemplateView(item: .constant(template))
+            }
+            //TemplateView(item: .constant(UILabel()))
+            
+            //NewTextEdit()
         }
     }
     

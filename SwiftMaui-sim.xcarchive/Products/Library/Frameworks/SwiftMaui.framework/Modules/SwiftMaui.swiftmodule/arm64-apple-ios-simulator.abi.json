@@ -228,6 +228,123 @@
           },
           {
             "kind": "Var",
+            "name": "itemTemplate",
+            "printedName": "itemTemplate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@SwiftMaui@objc(cs)MySwiftUIView(py)itemTemplate",
+            "mangledName": "$s9SwiftMaui02MyA6UIViewC12itemTemplateSo0D0CSgvp",
+            "moduleName": "SwiftMaui",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@SwiftMaui@objc(cs)MySwiftUIView(im)itemTemplate",
+                "mangledName": "$s9SwiftMaui02MyA6UIViewC12itemTemplateSo0D0CSgvg",
+                "moduleName": "SwiftMaui",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@SwiftMaui@objc(cs)MySwiftUIView(im)setItemTemplate:",
+                "mangledName": "$s9SwiftMaui02MyA6UIViewC12itemTemplateSo0D0CSgvs",
+                "moduleName": "SwiftMaui",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9SwiftMaui02MyA6UIViewC12itemTemplateSo0D0CSgvM",
+                "mangledName": "$s9SwiftMaui02MyA6UIViewC12itemTemplateSo0D0CSgvM",
+                "moduleName": "SwiftMaui",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "onChangedHandler",
             "printedName": "onChangedHandler",
             "children": [
@@ -502,6 +619,32 @@
             ]
           },
           {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MySwiftUIView",
+                "printedName": "SwiftMaui.MySwiftUIView",
+                "usr": "c:@M@SwiftMaui@objc(cs)MySwiftUIView"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SwiftMaui@objc(cs)MySwiftUIView(im)init",
+            "mangledName": "$s9SwiftMaui02MyA6UIViewCACycfc",
+            "moduleName": "SwiftMaui",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
             "kind": "Function",
             "name": "createSwiftUIView",
             "printedName": "createSwiftUIView()",
@@ -521,32 +664,6 @@
               "ObjC"
             ],
             "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "MySwiftUIView",
-                "printedName": "SwiftMaui.MySwiftUIView",
-                "usr": "c:@M@SwiftMaui@objc(cs)MySwiftUIView"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@SwiftMaui@objc(cs)MySwiftUIView(im)init",
-            "mangledName": "$s9SwiftMaui02MyA6UIViewCACycfc",
-            "moduleName": "SwiftMaui",
-            "overriding": true,
-            "implicit": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override"
-            ],
-            "init_kind": "Designated"
           }
         ],
         "declKind": "Class",
@@ -555,8 +672,7 @@
         "moduleName": "SwiftMaui",
         "declAttributes": [
           "AccessControl",
-          "ObjC",
-          "RawDocComment"
+          "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
         "inheritsConvenienceInitializers": true,
@@ -971,7 +1087,7 @@
     {
       "filePath": "\/Users\/artemdenisov\/SwiftUI_To_Maui\/SwiftMaui\/SwiftMaui\/UIKitWrapper.swift",
       "kind": "IntegerLiteral",
-      "offset": 1383,
+      "offset": 1678,
       "length": 1,
       "value": "0"
     },

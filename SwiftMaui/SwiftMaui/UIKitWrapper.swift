@@ -40,6 +40,20 @@ class MyHosting<Content> : UIHostingController<Content> where Content : View {
 //    }
 //}
 
+struct TemplateView<TView>: UIViewRepresentable where TView: UIView {
+    typealias UIViewType = TView
+    
+    @Binding var item: TView
+    
+    func makeUIView(context: Context) -> TView {
+        return item
+    }
+
+    func updateUIView(_ uiView: TView, context: Context) {
+        
+    }
+}
+
 @objc public class MySwiftUIView: NSObject, UIViewHost , UIKitWrapper {
     typealias Swift = SwiftUIView
     //typealias Kit = UIView
@@ -56,12 +70,29 @@ class MyHosting<Content> : UIHostingController<Content> where Content : View {
     }
     @objc public var itemTemplate : UIView?
     
+    
+    
     @objc public var onChangedHandler : ((Int) -> Void)?
     @objc public var uiView: UIView? {
         hostingController?.view
     }
     @objc public var viewController: UIViewController? { hostingController }
+    
+    public override init() {
+        super.init()
+        createSwiftUIView()
+    }
+    
     @objc public func createSwiftUIView() {
+//        let label = UILabel()
+//        label.text = "template"
+//        label.textColor = UIColor.green
+        
+//        itemView = UIButton()
+//        if let leb =  itemView as? UILabel {
+//            leb.text = "label temp2"
+//            leb.textColor = UIColor.systemPink
+//        }
         swiftUIView = SwiftUIView(viewModel: self)
         createController(view: swiftUIView!)
     }

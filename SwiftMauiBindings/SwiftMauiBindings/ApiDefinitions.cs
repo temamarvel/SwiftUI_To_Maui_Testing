@@ -31,6 +31,10 @@ namespace Bindings.SwiftUIToMaui
 		[Export ("counter")]
 		nint Counter { get; set; }
 
+		// @property (nonatomic, strong) UIView * _Nullable itemTemplate;
+		[NullAllowed, Export ("itemTemplate", ArgumentSemantic.Strong)]
+		UIView ItemTemplate { get; set; }
+
 		// @property (copy, nonatomic) void (^ _Nullable)(NSInteger) onChangedHandler;
 		[NullAllowed, Export ("onChangedHandler", ArgumentSemantic.Copy)]
 		Action<nint> OnChangedHandler { get; set; }

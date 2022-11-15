@@ -16,17 +16,20 @@ public class TextEditHandler : iOSHandlerBase<MySwiftUIView, TextEditView> {
             //[nameof(MyView2.Counter)] = MapCounter,
     
         };
-    
+
     protected override UIView CreatePlatformView() {
         base.CreatePlatformView();
         Wrapper = new MySwiftUIView();
-        Wrapper.CreateSwiftUIView();
 
-        Button v1 = this.VirtualView.ItemTemplate.CreateContent() as Button;
+        ApplyTemplate();
 
-        
-        var h1 = v1.ToHandler(this.MauiContext);
-        
         return Wrapper.UiView;
+    }
+
+    private void ApplyTemplate() {
+        if (this.VirtualView.ItemTemplate.CreateContent() is VisualElement visualElement) {
+            var handler = visualElement.ToHandler(MauiContext);
+            Wrapper.ItemTemplate = handler.PlatformView;
+        }
     }
 }

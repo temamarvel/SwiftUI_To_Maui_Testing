@@ -263,11 +263,12 @@ SWIFT_PROTOCOL("_TtP9SwiftMaui10UIViewHost_")
 SWIFT_CLASS("_TtC9SwiftMaui13MySwiftUIView")
 @interface MySwiftUIView : NSObject <UIViewHost>
 @property (nonatomic) NSInteger counter;
+@property (nonatomic, strong) UIView * _Nullable itemTemplate;
 @property (nonatomic, copy) void (^ _Nullable onChangedHandler)(NSInteger);
 @property (nonatomic, readonly, strong) UIView * _Nullable uiView;
 @property (nonatomic, readonly, strong) UIViewController * _Nullable viewController;
-- (void)createSwiftUIView;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)createSwiftUIView;
 @end
 
 

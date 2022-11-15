@@ -18,6 +18,7 @@ import _StringProcessing
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
   }
+  @objc public var itemTemplate: UIKit.UIView?
   @objc public var onChangedHandler: ((Swift.Int) -> Swift.Void)?
   @objc public var uiView: UIKit.UIView? {
     @objc get
@@ -25,8 +26,8 @@ import _StringProcessing
   @objc public var viewController: UIKit.UIViewController? {
     @objc get
   }
-  @objc public func createSwiftUIView()
   @objc override dynamic public init()
+  @objc public func createSwiftUIView()
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
