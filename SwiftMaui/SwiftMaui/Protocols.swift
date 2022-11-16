@@ -20,11 +20,15 @@ protocol UIKitWrapper : NSObject, ObservableObject {
     //var uiView: Kit? { get }
     var swiftUIView : Swift? { get set }
     var hostingController : Controller? { get set}
-    //TODO: do it in extension
+    //MARK: method can't have default implementation in UIKitWrapper extension
+    //It must reference view-model object, which conforms more than one protocol UIKitWrapper
+    //So, you must implement in by yourself 
+    
     func createSwiftUIView() -> Void
 }
 
 extension UIKitWrapper {
+    //TODO: how to override it
     func createController(view: Swift){
         hostingController = Controller(rootView: view)
     }

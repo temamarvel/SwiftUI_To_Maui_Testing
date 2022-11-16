@@ -78,6 +78,8 @@ struct TemplateView<TView>: UIViewRepresentable where TView: UIView {
     }
     @objc public var viewController: UIViewController? { hostingController }
     
+    
+    //TODO: make it requarable with protocol & implement as default in UIKitWrapper extension
     public override init() {
         super.init()
         createSwiftUIView()
@@ -97,6 +99,8 @@ struct TemplateView<TView>: UIViewRepresentable where TView: UIView {
         createController(view: swiftUIView!)
     }
     
+    
+    
 //    func createController(swiftView: SwiftUIView) {
 //        hostingController = UIHostingController(rootView: swiftView)
 //    }
@@ -114,13 +118,13 @@ struct TemplateView<TView>: UIViewRepresentable where TView: UIView {
     }
 
     var swiftUIView : Swift?
-    var hostingController: MyHosting<TextWrapperView>?
+    var hostingController: Controller?
     @objc public var uiView: UIView? {
         hostingController?.view
     }
 
     func createSwiftUIView() {
-        swiftUIView = TextWrapperView()
+        swiftUIView = Swift()
         createController(view: swiftUIView!)
     }
     
