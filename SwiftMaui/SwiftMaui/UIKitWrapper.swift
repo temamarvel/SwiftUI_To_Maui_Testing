@@ -54,6 +54,33 @@ struct TemplateView<TView>: UIViewRepresentable where TView: UIView {
     }
 }
 
+@objc public class TemplatedItemView: NSObject, UIViewHost, UIKitWrapper{
+    
+    
+    var swiftUIView: TemplatedItem?
+    
+    var hostingController: MyHosting<TemplatedItem>?
+    @objc public var itemTemplate : UIView?
+    
+    func createSwiftUIView() {
+        swiftUIView = TemplatedItem(viewModel: self)
+        createController(view: swiftUIView!)
+    }
+    
+    required public override init() {
+        super.init()
+        createSwiftUIView()
+    }
+    
+    //TODO: implement default behaviour
+    @objc public var uiView: UIView? {
+        hostingController?.view
+    }
+    
+    typealias Swift = TemplatedItem
+    typealias Controller = MyHosting<TemplatedItem>
+}
+
 @objc public class MySwiftUIView: NSObject, UIViewHost , UIKitWrapper {
     typealias Swift = SwiftUIView
     //typealias Kit = UIView
@@ -79,8 +106,8 @@ struct TemplateView<TView>: UIViewRepresentable where TView: UIView {
     @objc public var viewController: UIViewController? { hostingController }
     
     
-    //TODO: make it requarable with protocol & implement as default in UIKitWrapper extension
-    public override init() {
+    //TODO: implement as default in UIKitWrapper extension
+    required public override init() {
         super.init()
         createSwiftUIView()
     }
@@ -112,7 +139,7 @@ struct TemplateView<TView>: UIViewRepresentable where TView: UIView {
     typealias Kit = UIView
     typealias Controller = MyHosting<TextWrapperView>
 
-    public override init() {
+    required public override init() {
         super.init()
         createSwiftUIView()
     }

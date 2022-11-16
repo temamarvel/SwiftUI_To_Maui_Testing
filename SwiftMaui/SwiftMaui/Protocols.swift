@@ -25,6 +25,7 @@ protocol UIKitWrapper : NSObject, ObservableObject {
     //So, you must implement in by yourself 
     
     func createSwiftUIView() -> Void
+    init()
 }
 
 extension UIKitWrapper {

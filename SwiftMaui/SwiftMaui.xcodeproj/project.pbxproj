@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B31A4B42924B64B00BCF8B9 /* TemplatedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B31A4B32924B64B00BCF8B9 /* TemplatedItem.swift */; };
 		3B721B7B292277B80083A349 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B721B7A292277B80083A349 /* Protocols.swift */; };
 		3B7CEEAB290D982D003C33E0 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CEEAA290D982C003C33E0 /* SwiftUIView.swift */; };
 		3B7CEEAF290D9FFE003C33E0 /* UIKitWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7CEEAE290D9FFE003C33E0 /* UIKitWrapper.swift */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B31A4B32924B64B00BCF8B9 /* TemplatedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatedItem.swift; sourceTree = "<group>"; };
 		3B721B7A292277B80083A349 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		3B7CEEA0290D9787003C33E0 /* SwiftMaui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMaui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7CEEAA290D982C003C33E0 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 				3B7CEEAE290D9FFE003C33E0 /* UIKitWrapper.swift */,
 				3BFA05422913FB6D00C54EFB /* MyTextEdit.swift */,
 				3B721B7A292277B80083A349 /* Protocols.swift */,
+				3B31A4B32924B64B00BCF8B9 /* TemplatedItem.swift */,
 			);
 			path = SwiftMaui;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			files = (
 				3B7CEEAF290D9FFE003C33E0 /* UIKitWrapper.swift in Sources */,
 				3B721B7B292277B80083A349 /* Protocols.swift in Sources */,
+				3B31A4B42924B64B00BCF8B9 /* TemplatedItem.swift in Sources */,
 				3BFA05432913FB6D00C54EFB /* MyTextEdit.swift in Sources */,
 				3B7CEEAB290D982D003C33E0 /* SwiftUIView.swift in Sources */,
 			);
