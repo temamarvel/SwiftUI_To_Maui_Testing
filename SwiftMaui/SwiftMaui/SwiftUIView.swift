@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SwiftUIView: View {
     @ObservedObject var viewModel: MySwiftUIView
+    @State private var showButton = false
+    
     
     var body: some View {
         VStack{
@@ -20,15 +22,27 @@ struct SwiftUIView: View {
             Button("Decrease"){
                 decrease()
             }
-
-            if let template = viewModel.itemTemplate {
-                TemplateView(item: .constant(template))
+            
+            Button("Toggle button"){
+                showButton.toggle()
             }
+            
+            if showButton{
+                Button("Click me"){
+                    
+                }
+            }
+
+//            if let template = viewModel.itemTemplate {
+//                TemplateView(item: .constant(template))
+//            }
             //TemplateView(item: .constant(UILabel()))
             
             //NewTextEdit()
         }
     }
+    
+    
     
     func increase() -> Void {
         viewModel.counter += 1

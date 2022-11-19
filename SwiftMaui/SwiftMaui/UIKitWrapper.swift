@@ -17,6 +17,10 @@ class MyHosting<Content> : UIHostingController<Content> where Content : View {
     @MainActor required dynamic init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func viewWillLayoutSubviews() {
+        print("test")
+    }
 }
 
 //@objc public protocol UIViewHost{

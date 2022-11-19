@@ -65,12 +65,12 @@ namespace Bindings.SwiftUIToMaui
 	[BaseType (typeof(NSObject), Name = "_TtC9SwiftMaui17TemplatedItemView")]
 	interface TemplatedItemView : UIViewHost
 	{
-		// @property (nonatomic, strong) UIView * _Nullable uiView;
-		[NullAllowed, Export ("uiView", ArgumentSemantic.Strong)]
-		UIView UiView { get; set; }
-
 		// @property (nonatomic, strong) UIView * _Nullable itemTemplate;
 		[NullAllowed, Export ("itemTemplate", ArgumentSemantic.Strong)]
 		UIView ItemTemplate { get; set; }
+
+		// @property (readonly, nonatomic, strong) UIView * _Nullable uiView;
+		[NullAllowed, Export ("uiView", ArgumentSemantic.Strong)]
+		UIView UiView { get; }
 	}
 }
